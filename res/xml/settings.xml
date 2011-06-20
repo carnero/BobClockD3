@@ -2,52 +2,56 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="Customise Look">
-        <com.att.preference.colorpicker.ColorPickerPreference
-            android:key="hours"
-            android:title="@string/hours_title"
-            android:summary="@string/hours_summary"
-            android:defaultValue="#bbbdbdbd"     
-            alphaSlider="true" />
-        <com.att.preference.colorpicker.ColorPickerPreference
-            android:key="minutes"
-            android:title="@string/minutes_title"
-            android:summary="@string/minutes_summary"
-            android:defaultValue="#eecf6f40"     
-            alphaSlider="true" />
-	    <CheckBoxPreference
-                android:key="lowercase"
-                android:title="Lowercase"
-                android:summary="Show date in lowercase" />
-        <ListPreference
-                        android:title="Date layout"
-                        android:summary="Select layout for date"
-                        android:key="datelayout"
-                        android:defaultValue="1"
-                        android:entries="@array/dateformats"
-                        android:entryValues="@array/dateformatvalues"
-                        android:dialogTitle="Date layout" />
-        <ListPreference
-                        android:title="Text Size"
-                        android:summary="Select date text size"
-                        android:key="fontsize"
-                        android:defaultValue="13"
-                        android:entries="@array/fontsizes"
-                        android:entryValues="@array/fontsizesvalues"
-                        android:dialogTitle="Font Size" />
-    </PreferenceCategory>
+	<PreferenceCategory android:title="Customise Look">
+		<com.att.preference.colorpicker.ColorPickerPreference
+			android:key="hours"
+			android:title="@string/hours_title"
+			android:summary="@string/hours_summary"
+			android:defaultValue="#bbbdbdbd"     
+			alphaSlider="true" />
+		<com.att.preference.colorpicker.ColorPickerPreference
+			android:key="minutes"
+			android:title="@string/minutes_title"
+			android:summary="@string/minutes_summary"
+			android:defaultValue="#eecf6f40"     
+			alphaSlider="true" />
+		<CheckBoxPreference
+			android:key="showdate"
+			android:title="Show date"
+			android:summary="Show date?" />
+		<CheckBoxPreference
+			android:key="lowercase"
+			android:title="Lowercase"
+			android:summary="Show date in lowercase" />
+		<ListPreference
+			android:title="Date layout"
+			android:summary="Select layout for date"
+			android:key="datelayout"
+			android:defaultValue="1"
+			android:entries="@array/dateformats"
+			android:entryValues="@array/dateformatvalues"
+			android:dialogTitle="Date layout" />
+		<ListPreference
+			android:title="Text Size"
+			android:summary="Select date text size"
+			android:key="fontsize"
+			android:defaultValue="13"
+			android:entries="@array/fontsizes"
+			android:entryValues="@array/fontsizesvalues"
+			android:dialogTitle="Font Size" />
+	</PreferenceCategory>
     
-    <PreferenceCategory android:title="Clock Mode">
-	    <CheckBoxPreference
-                android:key="mode24"
-                android:title="24 hour"
-                android:summary="Select whether to display as 24 hour" />
-    </PreferenceCategory>
+	<PreferenceCategory android:title="Clock Mode">
+		<CheckBoxPreference
+			android:key="mode24"
+			android:title="24 hour"
+			android:summary="Select whether to display as 24 hour" />
+	</PreferenceCategory>
     
-    <PreferenceCategory android:title="Launch Mode">
-        <CheckBoxPreference
-                android:key="launchclock"
-                android:title="Launch Clock"
-                android:summary="Attempt to launch clock when pressed, only finds common clock apps!" />
-    </PreferenceCategory>
+	<PreferenceCategory android:title="Launch Mode">
+		<CheckBoxPreference
+			android:key="launchclock"
+			android:title="Launch Clock"
+			android:summary="Attempt to launch clock when pressed, only finds common clock apps!" />
+	</PreferenceCategory>
 </PreferenceScreen>

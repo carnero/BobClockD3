@@ -17,32 +17,31 @@ import android.os.IBinder;
  *
  */
 public class BobClockD3Service extends Service {
-	
+
 	private BroadcastReceiver broadcastReceiver;
-	
-    @Override
-    public void onCreate() {
-	    broadcastReceiver = new BroadcastReceiver() {
-	        @Override
-	        public void onReceive(Context context, Intent intent) {
-	        	final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-	        	BobClockD3.updateAppWidget(context, appWidgetManager);
-	        }
-	    };
-		
-	    IntentFilter intentFilter = new IntentFilter(Intent.ACTION_TIME_TICK);
-	    registerReceiver(broadcastReceiver, intentFilter);
+
+	@Override
+	public void onCreate() {
+		broadcastReceiver = new BroadcastReceiver() {
+
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+				BobClockD3.updateAppWidget(context, appWidgetManager);
+			}
+		};
+
+		IntentFilter intentFilter = new IntentFilter(Intent.ACTION_TIME_TICK);
+		registerReceiver(broadcastReceiver, intentFilter);
 	}
 
-    @Override
-    public IBinder onBind(Intent intent) {
-	    return null;
-    }
-    
-    @Override
-    public void onDestroy() {
-    	unregisterReceiver(broadcastReceiver);
-    }
-    
-    
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+
+	@Override
+	public void onDestroy() {
+		unregisterReceiver(broadcastReceiver);
+	}
 }
