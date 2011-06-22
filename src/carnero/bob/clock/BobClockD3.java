@@ -1,4 +1,4 @@
-package bob.clock;
+package carnero.bob.clock;
 
 import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
@@ -152,6 +152,7 @@ public class BobClockD3 extends AppWidgetProvider {
 
 		final int color1 = preferences.getInt(BobClockD3Configure.HOURS_COLOUR_KEY, 0x97bdbdbd);
 		final int color2 = preferences.getInt(BobClockD3Configure.MINUTES_COLOUR_KEY, 0xcccf6f40);
+		final int color3 = preferences.getInt(BobClockD3Configure.DATE_COLOUR_KEY, 0x97bdbdbd);
 
 		final int fontSizePreference = Integer.parseInt(preferences.getString("fontsize", "13"));
 		final int fontSize = (int) (fontSizePreference * density);
@@ -246,6 +247,7 @@ public class BobClockD3 extends AppWidgetProvider {
 		canvas.drawBitmap(minuteBitmap, source, dest, paint);
 
 		if (showDate) {
+			paint.setColor(color3);
 			canvas.drawText(dayString, leftPadding + (int) (9 * density), topPadding + ampmHeight + (int) (220 * density), paint);
 			canvas.drawText(dateString, leftPadding + (int) (9 * density), topPadding + ampmHeight + ampmHeight + (int) (220 * density), paint);
 

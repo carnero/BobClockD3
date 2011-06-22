@@ -1,4 +1,4 @@
-package bob.clock;
+package carnero.bob.clock;
 
 import java.io.FileOutputStream;
 
@@ -21,11 +21,12 @@ import android.widget.Button;
  */
 public class BobClockD3Configure extends PreferenceActivity {
 
-	static final String PREFS_KEY = "bob.clock.BobClockD3";
+	static final String PREFS_KEY = "carnero.bob.clock.BobClockD3";
 	static final String HOURS_FILE = "hours.png";
 	static final String MINUTES_FILE = "minutes.png";
 	static final String HOURS_COLOUR_KEY = "hours";
 	static final String MINUTES_COLOUR_KEY = "minutes";
+	static final String DATE_COLOUR_KEY = "date";
 	protected int widgetId;
 	protected ProgressDialog dialog;
 

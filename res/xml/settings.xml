@@ -15,6 +15,12 @@
 			android:summary="@string/minutes_summary"
 			android:defaultValue="#eecf6f40"     
 			alphaSlider="true" />
+		<com.att.preference.colorpicker.ColorPickerPreference
+			android:key="date"
+			android:title="@string/date_title"
+			android:summary="@string/date_summary"
+			android:defaultValue="#bbbdbdbd"     
+			alphaSlider="true" />
 		<CheckBoxPreference
 			android:key="showdate"
 			android:title="Show date"
